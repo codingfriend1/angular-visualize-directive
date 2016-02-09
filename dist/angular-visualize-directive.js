@@ -34,7 +34,8 @@ angular.module('angular-visualize-directive', [])
             transclude: true,
             scope: {
                 resource: '=',
-                params: '='
+                params: '=',
+                auth: '='
             },
             template: '<div ng-transclude></div>',
             link: function (scope, element, attrs) {
@@ -63,11 +64,7 @@ angular.module('angular-visualize-directive', [])
                     /* Configure your jasperserver connection */
                     visualize(
                     {
-                        auth: {
-                            name: "jasperadmin",
-                            password: "jasperadmin",
-                            organization: "organization_1"
-                        }
+                        auth: scope.auth || {}
                     },
 
                     function (v) {
