@@ -22,7 +22,7 @@ Configuration:
 3. Configure your **JasperServer** connection outside the directive:
 
   ``` 
-  scope.auth = {
+  scope.report.auth = {
     name: "jasperadmin",
     password: "jasperadmin",
     organization: "organization_1"
@@ -31,4 +31,4 @@ Configuration:
 
 4. Insert the **visualize** directive with the desired parameters. *Resource* will receive the report path and *params* the additional report parameters.
 
-  ``` <visualize id='report' resource='report.resource' params='report.params'></visualize> ```
+  ``` <visualize id='report' resource='report.resource' params='report.params' auth='report.auth'></visualize> ```
