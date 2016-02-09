@@ -19,17 +19,14 @@ Configuration:
   ]);
   ```
   
-3. Configure your **JasperServer** connection inside the directive:
+3. Configure your **JasperServer** connection outside the directive:
 
   ``` 
-  visualize(
-      {
-        auth: {
-            name: "jasperadmin",
-            password: "jasperadmin",
-            organization: "organization_1"
-        }
-    } 
+  scope.auth = {
+  	name: "jasperadmin",
+        password: "jasperadmin",
+        organization: "organization_1"
+  };
     ```
 
 4. Insert the **visualize** directive with the desired parameters. *Resource* will receive the report path and *params* the additional report parameters.
