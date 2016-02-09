@@ -23,9 +23,9 @@ Configuration:
 
   ``` 
   scope.auth = {
-  	name: "jasperadmin",
-        password: "jasperadmin",
-        organization: "organization_1"
+    name: "jasperadmin",
+    password: "jasperadmin",
+    organization: "organization_1"
   };
     ```
 
